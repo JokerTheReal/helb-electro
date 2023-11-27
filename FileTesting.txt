@@ -1,0 +1,31 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.nio.file.*;
+import java.io.IOException;
+import java.util.List;
+import java.util.regex.Pattern;
+
+public class FileTest {
+    
+    @Test
+    public void testFileContainsNoAberrantLines() {
+        Path path = Paths.get("/chemin/vers/votre/fichier.txt");
+        try {
+            List<String> lines = Files.readAllLines(path);
+            for (String line : lines) {
+                if (containsSpecialCharacters(line)) {
+                    fail("Le fichier contient une ligne aberrante: " + line);
+                }
+            }
+        } catch (IOException e) {
+            fail("Erreur lors de la lecture du fichier", e);
+        }
+    }
+
+    private boolean containsSpecialCharacters(String str) {
+        // Ceci correspondra à tout caractère qui n'est pas un chiffre, une lettre ou une virgule.
+        Pattern pattern = Pattern.compile("[^a-zA-Z0-9,]");
+        return pattern.matcher(str).find();
+    }
+}
