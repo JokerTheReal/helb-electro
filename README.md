@@ -1,4 +1,6 @@
-## Getting Started
+#![HELB Motors](https://github.com/JokerTheReal/HelbElectro/assets/146811828/56d0f376-43e3-4356-968d-3c589e1ddcf9)
+
+# Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
@@ -21,3 +23,6 @@ The `JAVA PROJECTS` view allows you to manage your dependencies. More details ca
 //
 
 You have to setup JAVA FX on your machine before testing the application.
+
+
+[HelbElectro_Rapport.pdf](https://github.com/JokerTheReal/HelbElectro/files/15346745/HelbElectro_Rapport.pdf)
